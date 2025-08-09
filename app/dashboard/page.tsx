@@ -4,7 +4,7 @@ import Header from "@/components/ui/shared/headers/header";
 import { useUser } from "@clerk/nextjs";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { FaRocket, FaTrello } from "react-icons/fa";
+import { FaRocket, FaTrello, FaPlus } from "react-icons/fa";
 import {
   Card,
   CardContent,
@@ -16,6 +16,7 @@ import {
 export default function Dashboard() {
   const { user } = useUser();
 
+  const handleCreateBoard = async () => {};
   return (
     <section>
       <Header />
@@ -29,6 +30,14 @@ export default function Dashboard() {
             Here's what's happening with your boards today.
           </p>
         </div>
+        {/* Create Button  */}
+        <Button
+          onClick={handleCreateBoard}
+          className="mb-8 h-12 w-auto cursor-pointer rounded md:w-full"
+        >
+          <FaPlus />
+          Create Board
+        </Button>
         {/* Stats */}
         <div className="mb-6 grid grid-cols-2 gap-4 sm:mb-8 sm:gap-6 lg:grid-cols-4">
           <Card>
