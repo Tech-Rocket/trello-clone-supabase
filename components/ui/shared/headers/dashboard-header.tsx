@@ -1,5 +1,5 @@
-import { FaTrello, FaUser, FaArrowRight } from "react-icons/fa";
-import { SignInButton, SignUpButton, UserButton, useUser } from "@clerk/nextjs";
+import { FaTrello } from "react-icons/fa";
+import { UserButton } from "@clerk/nextjs";
 
 export default function DashboarHeader() {
   return (
